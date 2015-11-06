@@ -30,6 +30,10 @@ h1, .h1 {
 
 h2, .h2 {
   font-size: 2em;
+
+  @include breakpoint(desk) {
+    font-size: 1.6em;
+  }
 }
 
 h3, .h3 {

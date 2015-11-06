@@ -66,12 +66,37 @@ header.header-main {
   background-size: 100%;
   background-attachment: fixed;
   position: relative;
-  height: 330px;
+  height: 490px;
+
+  @include breakpoint(desk-wide) {
+    height: 350px;
+  }
+
+  @include breakpoint(desk) {
+    height: 300px;
+  }
+
+  @include breakpoint(lap) {
+    height: 275px;
+  }
+
+  @include breakpoint(palm-wide) {
+    height: 200px;
+  }
+
+  @include breakpoint(palm) {
+    height: 160px;
+  }
+
 
   .header-main__logo {
     margin: 0 auto;
     display: block;
     padding: $unit-md 0;
+
+    @include breakpoint(lap) {
+      width: 20%;
+    }
   }
 
   .triangle {
@@ -91,10 +116,19 @@ header.header-main {
 
   .main-content__title {
     margin-top: -1em;
+
+    @include breakpoint(desk) {
+      margin-top: 0;
+      font-size: 1.8em;
+    }
   }
 
   .main-content__body {
     font-size: $size-lg;
+
+    @include breakpoint(desk) {
+      font-size: $size-md;
+    }
   }
 }
 
@@ -129,7 +163,6 @@ header.header-main {
 ////////////////////////////////////////
 
 .sponsors {
-  @extend %content-section;
 
   .sponsor-logos {
     text-align: center;
@@ -144,7 +177,7 @@ header.header-main {
       }
 
       @include breakpoint(palm) {
-        width: 30%;
+        width: 40%;
       }
     }
   }
@@ -156,6 +189,7 @@ header.header-main {
 
 footer {
   @extend %content-section;
+  margin-top: 3em;
   color: #fff;
   background: darken($color-brand1, 20);
   text-align: center;
@@ -201,7 +235,7 @@ footer {
     font-weight: 300;
 
     @include breakpoint(palm) {
-      font-size: $size-sm;
+      font-size: $size-xs;
     }
 
     a {
