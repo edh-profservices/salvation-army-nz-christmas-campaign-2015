@@ -1,6 +1,6 @@
-# metalsmith-prismic-gub
+# Salvation Army NZ Christmas Campaign 2015
 
-Responsive web sites (or giving hubs) created with [Gulp.js](http://gulpjs.com/), [Metalsmith](http://www.metalsmith.io/) and [Prismic.io](https://prismic.io/). Build static sites with [Handlebars](http://handlebarsjs.com/), [SASS](http://sass-lang.com/) and [Webpack](http://webpack.github.io/).
+Responsive giving hub for Salvation Army NZ Christmas Campaign 2015.
 
 ## Dependencies
 
@@ -9,35 +9,17 @@ Responsive web sites (or giving hubs) created with [Gulp.js](http://gulpjs.com/)
 
 ## Set up
 
-1. [Fork](https://help.github.com/articles/fork-a-repo/) this repository on GitHub.
-2. Clone your forked repository to your local machine:
+1. Clone repository to your local machine:
 
   ```sh
-  git clone https://github.com/YOUR-GITHUB-USERNAME/metalsmith-prismic-gub.git
+  git clone https://github.com/everydayhero/salvation-army-nz-christmas-campaign-2015.git
   ```
-3. With your terminal/command prompt still open, navigate to your project and install the dependencies (setup may take a few minutes):
+2. With your terminal/command prompt still open, navigate to your project and install the dependencies (setup may take a few minutes):
 
   ```sh
-  $ cd metalsmith-prismic-gub
+  $ cd salvation-army-nz-christmas-campaign-2015
   $ npm run setup
   ```
-
-#### Get Prismic
-
-1. Create an account with [Prismic.io](https://prismic.io/). You can register free accounts for testing.
-
-2. Once registered obtain an endpoint URL for your prismic repo (Settings > API & Security).
-
-3. Create a `prismic-config.json` file in your project root directory. It will contain your [metalsmith-prismic](https://github.com/mbanting/metalsmith-prismic) configuration. It should look something like this:
-
-  ```json
-    {
-      "url": "https://your-prismic-repo.cdn.prismic.io/api"
-    }
-  ```
-4. Use [this gist](https://gist.github.com/slwen/f093c8ac5b6fdd16ecb2) as an example [Document Mask](https://developers.prismic.io/documentation/repository-administrators-manual#document-masks) to get started (or create your own). Refer to [metalsmith-prismic](https://github.com/mbanting/metalsmith-prismic) to learn more about working with your own content.
-
-**Note:** If you don't want or need to use Prismic then skip to the next section and feel free to remove references to Prismic from your `metalsmith.js` file and uninstall the Prismic package: `npm uninstall metalsmith-prismic --save-dev`.
 
 #### Run Dev
 

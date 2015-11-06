@@ -1,48 +1,49 @@
 {{> header }}
-  <div class="main-wrapper">
-    <div class="main-banner">
-      {{{ prismic.homePage.results.[0].data.banner.html }}}
-    </div>
 
-    <div class="funds-raised" id="fundsRaisedProgress"></div>
+  <header class="header-main">
+    <div class="container">
+      <img src="img/logo.png" alt="The Salvation Army" class="header-main__logo" />
+    </div><!-- .container -->
+    <img src="img/triangle.png" alt="" class="triangle" />
+  </header>
 
-    <div class="row">
-      <div class="intro">
-        <div class="intro__header">
-          <div class="intro__title">
-            {{{ prismic.homePage.results.[0].data.title.html }}}
-          </div>
-          <div class="intro__subtitle">
-            {{{ prismic.homePage.results.[0].data.subtitle.html }}}
-          </div>
-        </div>
-        <div class="intro__body">
-          {{{ prismic.homePage.results.[0].data.short_lede.html }}}
-        </div>
-        <div class="intro__footer">
-          <div id="ShareButtonWidget"></div>
-        </div>
-      </div>
+  <div class="container">
+    <div class="main-content">
+      <h1 class="main-content__title">This is the main heading</h1>
 
-      <div class="calls-to-action">
-        <div class="social-proof">
-          <div id="TotalDonationsWidget" class="donations stat"></div>
-          <div id="TotalSupportersWidget" class="supporters stat"></div>
-          <div id="CountdownWidget" class="countdown stat"></div>
-        </div>
-        <a href="#" class="donate-btn btn btn--lg btn--block">Donate Now</a>
-        <a href="#" class="register-btn btn btn--lg btn--block btn--tertiary">Register Now</a>
-      </div>
-    </div>
+      <p class="main-content__body">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="" class="btn">Donate Now</a>
+    </div><!-- .main-content -->
 
-    <hr>
+    <div class="widget-container">
 
-    <div class="row">
-      <div class="user-content">
-        {{{ prismic.homePage.results.[0].data.content.html }}}
-      </div>
+    </div><!-- .widget-container -->
 
-      {{> sidebar }}
-    </div>
-  </div>
+    <div class="secondary-content">
+      <h2 class="secondary-content__title">This is a sub heading</h2>
+
+      <div class="secondary-content__body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue.</p>
+
+        <p>Donec id elit non mi porta gravida at eget metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+
+        <p>Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+
+        <p>Vestibulum id ligula porta felis euismod semper. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Nulla vitae elit libero, a pharetra augue.</p>
+      </div><!-- .secondary-content__body -->
+    </div><!-- .secondary-content -->
+
+    <div class="sponsors">
+      <h2>Our Sponsors</h2>
+
+      <div class="sponsor-logos">
+        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
+        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
+        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
+        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
+        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
+      </div><!-- .sponsor-logos -->
+    </div><!-- .sponsors -->
+  </div><!-- .container -->
+
 {{> footer }}

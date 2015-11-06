@@ -13,13 +13,13 @@ $imgPath: "../img/";
 // COLORS
 /////////////////////////////////////////////////////////////////////
 
-$color-darkGrey: #333;
+$color-darkGrey: #4e4e4e;
 $color-darkerGrey: #111;
 $color-mutedGrey: #999;
 $color-lightGrey: #eee;
 
-$color-brand1: $color-darkGrey;
-$color-brand2: #ddd;
+$color-brand1: #e72b37;
+$color-brand2: #0b9444;
 
 
 // TYPE
@@ -29,9 +29,11 @@ $default-text: $color-darkGrey;
 $muted-text: $color-mutedGrey;
 $link-text: $color-brand1;
 
+$size-lg: 20px;
+$size-md: 18px;
 $size-base: 16px;
-$size-small: 14px;
-$size-tiny: 12px;
+$size-sm: 14px;
+$size-xs: 12px;
 
 // UNIT SIZES
 /////////////////////////////////////////////////////////////////////
@@ -51,3 +53,10 @@ $unit-xxxl: 64px;
 
 $body-background: $color-lightGrey;
 $radius: 3px;
+
+
+// FONTS
+/////////////////////////////////////////////////////////////////////
+$body: 'Lato', sans-serif;
+$serif: 'Bitter', serif;
+$sans-serif: 'Montserrat', sans-serif;
