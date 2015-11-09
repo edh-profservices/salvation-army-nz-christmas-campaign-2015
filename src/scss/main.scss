@@ -133,11 +133,21 @@ header.header-main {
 }
 
 
+
+// WIDGET SECTION
+////////////////////////////////////////
+.widget-container {
+  max-width: 495px;
+  margin: $unit-xxl auto 0;
+  padding: 0 $unit-md;
+  box-sizing: border-box;
+}
+
+
 // SECONDARY CONTENT SECTION
 ////////////////////////////////////////
 
 .secondary-content {
-  @extend %content-section;
 
   .secondary-content__body {
     -webkit-column-count: 2;
@@ -167,13 +177,14 @@ header.header-main {
   .sponsor-logos {
     text-align: center;
 
-    .sponsor-logos__logo {
+    a.sponsor-logos__link {
+      display: inline-block;
       width: 17%;
       box-sizing: border-box;
       margin: 1em 0.5em;
 
       @include breakpoint(lap) {
-        width: 23%;
+        width: 30%;
       }
 
       @include breakpoint(palm) {

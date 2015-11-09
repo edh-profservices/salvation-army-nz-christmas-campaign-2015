@@ -14,11 +14,22 @@
       <p class="main-content__body">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas faucibus mollis interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       <a href="" class="btn">Donate Now</a>
     </div><!-- .main-content -->
+  </div><!-- .container -->
 
-    <div class="widget-container">
+  <div class="widget-container">
+    <iframe src="http://d2h3g7rbnequ8a.cloudfront.net/salvation-army-nz-funds-raised-widget-2015/index.html" frameborder="0" style="width: 100%; height: 100%; max-width: 495px;" id='edh-iframe-raised'></iframe>
+    <script type='text/javascript'>
+      function resizeIframeRaised() {
+        var obj = document.getElementById('edh-iframe-raised');
+        var ratio = 495 / 730;
+        var height = obj.offsetWidth / ratio;
+        obj.style.height = height+'px';
+      }
+      setInterval(resizeIframeRaised, 500);
+    </script>
+  </div><!-- .widget-container -->
 
-    </div><!-- .widget-container -->
-
+  <div class="container">
     <div class="secondary-content">
       <h2 class="secondary-content__title">This is a sub heading</h2>
 
@@ -37,11 +48,11 @@
       <h2>Our Sponsors</h2>
 
       <div class="sponsor-logos">
-        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
-        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
-        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
-        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
-        <img class="sponsor-logos__logo" src="http://placehold.it/200x200" alt="" />
+        <a class="sponsor-logos__link" href="#"><img class="sponsor-logos__img" src="http://placehold.it/200x200" alt="" /></a>
+        <a class="sponsor-logos__link" href="#"><img class="sponsor-logos__img" src="http://placehold.it/200x200" alt="" /></a>
+        <a class="sponsor-logos__link" href="#"><img class="sponsor-logos__img" src="http://placehold.it/200x200" alt="" /></a>
+        <a class="sponsor-logos__link" href="#"><img class="sponsor-logos__img" src="http://placehold.it/200x200" alt="" /></a>
+        <a class="sponsor-logos__link" href="#"><img class="sponsor-logos__img" src="http://placehold.it/200x200" alt="" /></a>
       </div><!-- .sponsor-logos -->
     </div><!-- .sponsors -->
   </div><!-- .container -->
