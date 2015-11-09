@@ -205,34 +205,37 @@ footer {
   background: darken($color-brand1, 20);
   text-align: center;
 
-  h3, a, a:visited {
+  h3 {
     color: #fff;
   }
 
   .social-media {
     a {
+      color: darken($color-brand1, 20);
       margin: $unit-md;
       display: inline-block;
-    }
-
-    .Icon {
-      font-size: $unit-xl;
       background: #fff;
-      color: darken($color-brand1, 20);
+      border-radius: 50%;
       height: 60px;
       width: 60px;
-      line-height: 60px;
-      border-radius: 50%;
-      transition: all 200ms ease-out;
+
+      @include breakpoint(palm) {
+        height: 40px;
+        width: 40px;
+      }
 
       &:hover {
         background: lighten($color-brand1, 15);
       }
+    }
+
+    .Icon {
+      font-size: $unit-xl;
+      color: darken($color-brand1, 20);
+      line-height: 60px;
 
       @include breakpoint(palm) {
         font-size: $unit-md;
-        height: 40px;
-        width: 40px;
         line-height: 40px;
       }
     }
@@ -251,6 +254,7 @@ footer {
 
     a {
       margin: 0 0.5em;
+      color: #fff;
 
       &:hover {
         color: lighten($color-brand1, 15);
