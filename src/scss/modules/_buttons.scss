@@ -4,16 +4,29 @@
   line-height: 1;
   text-decoration: none;
   text-align: center;
-  padding: $unit-md $unit-xxl;
+  padding: $unit-md;
   color: #fff;
   border-radius: $radius;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: $unit-lg;
+  font-size: $size-lg;
+  width: 40%;
+  margin: 0 0.5em;
 
   &:hover {
     text-decoration: none;
     background: darken($color-brand1, 15);
+  }
+
+  @include breakpoint(lap) {
+    font-size: $size-base;
+  }
+
+  @include breakpoint(palm-wide) {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: $unit-md 0;
   }
 }
 
