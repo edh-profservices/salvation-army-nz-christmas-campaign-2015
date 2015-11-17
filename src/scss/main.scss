@@ -69,11 +69,11 @@ header.header-main {
   height: 490px;
 
   @include breakpoint(desk-wide) {
-    height: 350px;
+    height: 400px;
   }
 
   @include breakpoint(desk) {
-    height: 300px;
+    height: 350px;
   }
 
   @include breakpoint(lap) {
@@ -92,10 +92,10 @@ header.header-main {
   .header-main__logo {
     margin: 0 auto;
     display: block;
-    padding: $unit-md 0;
+    padding: $unit-xxl 0;
 
     @include breakpoint(lap) {
-      width: 20%;
+      width: 30%;
     }
   }
 
@@ -144,18 +144,39 @@ header.header-main {
 }
 
 
-// SECONDARY CONTENT SECTION
+// TERTIARY CONTENT SECTION
 ////////////////////////////////////////
 
 .secondary-content {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  .secondary-content__body {
+
+// TERTIARY CONTENT SECTION
+////////////////////////////////////////
+
+.tertiary-content {
+  padding: 3rem 0 2rem;
+
+  @include breakpoint(palm-wide) {
+    padding: 0;
+  }
+
+  .tertiary-content__body {
+    margin-top: 2rem;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
     -webkit-column-gap: 2em;
     -moz-column-gap: 2em;
     column-gap: 2em;
+
+    > *:first-child {
+      margin-top: 0;
+    }
 
     @include breakpoint(lap) {
       -webkit-column-count: 1;
@@ -219,11 +240,6 @@ footer {
       height: 60px;
       width: 60px;
 
-      @include breakpoint(palm) {
-        height: 40px;
-        width: 40px;
-      }
-
       &:hover {
         background: lighten($color-brand1, 15);
       }
@@ -233,11 +249,6 @@ footer {
       font-size: $unit-xl;
       color: darken($color-brand1, 20);
       line-height: 60px;
-
-      @include breakpoint(palm) {
-        font-size: $unit-md;
-        line-height: 40px;
-      }
     }
   }
 

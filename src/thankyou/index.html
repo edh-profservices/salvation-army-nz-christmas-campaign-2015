@@ -5,11 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thank You | Salvation Army NZ Christmas Campaign</title>
   <base href="/">
-  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|Montserrat:400,700|Bitter:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700|Montserrat:400,700|Caveat+Brush' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="//d1ig6folwd6a9s.cloudfront.net/widgets-0.6.10.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="//d1ig6folwd6a9s.cloudfront.net/widgets-0.6.10.js"></script>
+
+  <link rel="canonical" href="http://www.amyschristmas.org.nz" />
+  <meta property="og:url" content="http://www.amyschristmas.org.nz" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Salvation Army NZ | Help light up Amy’s Christmas Tree" />
+  <meta property="og:description" content="This year your business can help light up Amy’s Christmas tree – and in doing so you’ll be helping The Salvation Army to make Christmas special for fragile Kiwi families in need." />
+  <meta property="og:image" content="http://www.amyschristmas.org.nz.s3-website-ap-southeast-2.amazonaws.com/img/amys-christmas-tree.png" />
 </head>
 <body>
 
@@ -22,9 +29,11 @@
 
   <div class="container">
     <div class="main-content">
-      <h1 class="main-content__title">Thank you for your generous donation!</h1>
+      <h1 class="main-content__title">Thank you for your generous support</h1>
 
-      <p class="main-content__body">Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+      <p class="main-content__body">Your donation has helped to light up Amy’s Christmas tree, ensuring that The Salvation Army can provide assistance to the thousands of fragile Kiwi families that desperately need our help at Christmas.</p>
+
+      <p>We greatly appreciate your support and wish you and your loved ones a very merry Christmas.  Thank you!</p>
     </div><!-- .main-content -->
   </div><!-- .container -->
 
@@ -41,26 +50,27 @@
     </script>
   </div><!-- .widget-container -->
 
+  <div class="container">
+    <img src="img/amy.jpg" alt="Amy" />
+  </div><!-- .container -->
+
   <footer>
     <div class="container">
       <h3>Share this page</h3>
 
       <div class="social-media">
-        <a href="#">
+        <a href="javascript: sharePopup('facebook', popUpConfig);">
           <i class="Icon fa fa-facebook fa-fw"></i>
         </a>
-        <a href="#">
+        <a href="javascript: sharePopup('twitter', popUpConfig);">
           <i class="Icon fa fa-twitter fa-fw"></i>
-        </a>
-        <a href="#">
-          <i class="Icon fa fa-instagram fa-fw"></i>
         </a>
       </div><!-- .social-media -->
 
       <nav class="nav-footer">
-        <a href="">HELP</a> |
-        <a href="">PRIVACY</a> |
-        <a href="">TERMS &amp; CONDITIONS</a>
+        <a href="http://help-au.everydayhero.com/">HELP</a> |
+        <a href="https://everydayhero.com/au/terms/privacy">PRIVACY</a> |
+        <a href="https://everydayhero.com/au/terms">TERMS &amp; CONDITIONS</a>
       </nav><!-- .nav-footer -->
 
       <div class="powered-by">
@@ -68,6 +78,53 @@
       </div><!-- .powered-by -->
     </div><!-- .container -->
   </footer>
-  <script src="js/bundle.js"></script>
+  <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+  <script>
+    // Sharing
+    var topWindow = '';
+    var popUpConfig = {
+      toolbar: 0,
+      status: 0,
+      width: 640,
+      height: 320
+    }
+    var shareURLs = {
+      'facebook': "http://www.facebook.com/sharer.php?u={url}&title={title}",
+      'twitter': "https://twitter.com/share?url={url}&text={title}",
+    }
+    var shareURL = "http://www.amyschristmas.org.nz";
+    var shareTitle = "Help light up Amy’s Christmas Tree";
+
+    function sharePopup(type, config) {
+      url = shareURLs[type];
+      url = url.replace('{url}', shareURL);
+      url = url.replace('{title}', shareTitle);
+
+      if (topWindow === '') {
+        var windowTop  = window.screenTop ? window.screenTop : window.screenY;
+        var windowLeft = window.screenLeft ? window.screenLeft : window.screenX;
+
+        var windowHeight = window.innerHeight;
+        var windowWidth = window.innerWidth;
+      } else {
+        var windowTop = topWindow['windowTop'];
+        var windowLeft = topWindow['windowLeft'];
+
+        var windowHeight = topWindow['windowHeight'];
+        var windowWidth = topWindow['windowWidth'];
+      }
+
+      config.top  = windowTop + ((windowHeight / 2) - (config.height / 2));
+      config.left = windowLeft + ((windowWidth / 2) - (config.width / 2));
+
+      config = JSON.stringify(config);
+      config = config.replace('{', '');
+      config = config.replace('}', '');
+      config = config.replace(/"/gi, '');
+      config = config.replace(/:/gi, '=');
+
+      var windowRef = window.open(url, 'shareWindow', config);
+    }
+  </script>
 </body>
 </html>

@@ -19,7 +19,8 @@
   }
 
   @include breakpoint(lap) {
-    font-size: $size-base;
+    font-size: $size-sm;
+    padding: $size-sm;
   }
 
   @include breakpoint(palm-wide) {
