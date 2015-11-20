@@ -1,0 +1,26 @@
+.Leaderboard,
+.TeamLeaderboard {
+  background: $color-lightGrey;
+  color: $color-darkGrey;
+  margin-bottom: $unit-lg;
+
+  .Leaderboard__heading,
+  .TeamLeaderboard__heading {
+    font-size: 2.8em;
+    color: darken($color-brand2, 12);
+  }
+}
+
+.LeaderboardItem__skin {
+  background: transparent;
+}
+
+.LeaderboardItem {
+  padding: 0 $unit-sm;
+}
+
+.leaderboard-wrapper {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}

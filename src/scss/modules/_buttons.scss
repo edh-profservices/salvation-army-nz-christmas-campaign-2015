@@ -4,13 +4,13 @@
   line-height: 1;
   text-decoration: none;
   text-align: center;
-  padding: $unit-md;
+  padding: $unit-md $unit-sm;
   color: #fff;
   border-radius: $radius;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: $size-lg;
-  width: 40%;
+  font-size: $size-md;
+  width: 25%;
   margin: 0 0.5em;
 
   &:hover {
@@ -18,16 +18,20 @@
     background: darken($color-brand1, 15);
   }
 
-  @include breakpoint(lap) {
-    font-size: $size-sm;
+  @include breakpoint(desk) {
+    font-size: $size-xs;
     padding: $size-sm;
   }
 
-  @include breakpoint(palm-wide) {
-    width: 100%;
+  @include breakpoint(lap) {
+    width: 50%;
     display: block;
     box-sizing: border-box;
-    margin: $unit-md 0;
+    margin: $unit-md auto;
+  }
+
+  @include breakpoint(palm-wide ) {
+    width: 100%;
   }
 }
 

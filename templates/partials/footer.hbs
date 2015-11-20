@@ -1,29 +1,43 @@
-  <footer>
-    <div class="container">
-      <h3>Share this page</h3>
+    <footer>
+      <div class="container">
+        <h3>Share this page</h3>
 
-      <div class="social-media">
-        <a href="javascript: sharePopup('facebook', popUpConfig);">
-          <i class="Icon fa fa-facebook fa-fw"></i>
-        </a>
-        <a href="javascript: sharePopup('twitter', popUpConfig);">
-          <i class="Icon fa fa-twitter fa-fw"></i>
-        </a>
-      </div><!-- .social-media -->
+        <div class="social-media">
+          <a href="javascript: sharePopup('facebook', popUpConfig);">
+            <i class="Icon fa fa-facebook fa-fw"></i>
+          </a>
+          <a href="javascript: sharePopup('twitter', popUpConfig);">
+            <i class="Icon fa fa-twitter fa-fw"></i>
+          </a>
+        </div><!-- .social-media -->
 
-      <nav class="nav-footer">
-        <a href="http://help-au.everydayhero.com/">HELP</a> |
-        <a href="https://everydayhero.com/au/terms/privacy">PRIVACY</a> |
-        <a href="https://everydayhero.com/au/terms">TERMS &amp; CONDITIONS</a>
-      </nav><!-- .nav-footer -->
+        <nav class="nav-footer">
+          <a href="http://help-au.everydayhero.com/">HELP</a> |
+          <a href="https://everydayhero.com/au/terms/privacy">PRIVACY</a> |
+          <a href="https://everydayhero.com/au/terms">TERMS &amp; CONDITIONS</a>
+        </nav><!-- .nav-footer -->
 
-      <div class="powered-by">
-        powered by <a href="http://everydayhero.com/"><img src="img/logo-edh.png" alt="everydayhero" title="everydayhero" /></a>
-      </div><!-- .powered-by -->
-    </div><!-- .container -->
-  </footer>
+        <div class="powered-by">
+          powered by <a href="http://everydayhero.com/"><img src="img/logo-edh.png" alt="everydayhero" title="everydayhero" /></a>
+        </div><!-- .powered-by -->
+      </div><!-- .container -->
+    </footer>
+  </div><!-- .main-wrapper -->
+
   <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
   <script>
+    // leaderboard
+    edh.widgets.renderWidget('leaderboard', 'Leaderboard', {
+      campaignUids: ['NZ-932'],
+      limit: 5,
+      pageSize: 5,
+      backgroundColor: "transparent",
+      i18n: {
+        heading: "Top Fundraisers",
+      }
+    });
+
+
     // Sharing
     var topWindow = '';
     var popUpConfig = {
